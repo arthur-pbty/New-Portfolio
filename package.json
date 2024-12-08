@@ -1,18 +1,18 @@
 {
-  "name": "portfolio",
+  "name": "streaming",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3333",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3333",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "15.0.4",
-    "portfolio": "file:",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "streaming": "file:"
   },
   "devDependencies": {
     "@types/node": "^20",
