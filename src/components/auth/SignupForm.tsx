@@ -4,13 +4,14 @@ import React, { useState } from "react";
 
 interface SignupFormProps {
   onSubmit: (username: string, email: string, password: string) => void;
+  error: string;
+  setError: (message: string) => void;
 }
 
-const SignupForm: React.FC<SignupFormProps> = ({ onSubmit }) => {
+const SignupForm: React.FC<SignupFormProps> = ({ onSubmit, error, setError }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

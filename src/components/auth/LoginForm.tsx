@@ -4,12 +4,13 @@ import React, { useState } from "react";
 
 interface LoginFormProps {
   onSubmit: (email: string, password: string) => void;
+  error: string;
+  setError: (message: string) => void;
 }
 
-const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
+const LoginForm: React.FC<LoginFormProps> = ({ onSubmit, error, setError }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
